@@ -22,7 +22,7 @@ body {
 }
 
 h2 {
-    background-color: salmon;
+    background-color: royalblue;
     padding: 20px 40px;
     border-bottom: 1px solid grey;
     align-content: center;
@@ -137,4 +137,11 @@ h2 {
 #reset:active {
     background-color: ivory;
     border-color: firebrick;
+}
+
+
+/* Hiding the initial checkbox */
+
+input[type=checkbox] {
+    visibility: visible;
 }
