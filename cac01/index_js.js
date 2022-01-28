@@ -102,7 +102,8 @@ function passwordvalidation(password, password2) {
     console.log("first password:" + passwordvalue + "\nsecond passwprd:" + password2value);
     var firstPassword = /^(?=.{10,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?\W).*$/g.test(passwordvalue);
     var secondPassword = /^(?=.{10,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?\W).*$/g.test(password2value);
-    console.log(passwordvalue + password2value);
+    console.log(firstPassword);
+    console.log(secondPassword);
     if (password2value === "") {
 
         setErrorFor(password2, "password can't be empty");
@@ -125,5 +126,11 @@ function passwordvalidation(password, password2) {
     } else if (firstPassword == false & secondPassword) {
         setErrorFor(password, "password dosent meet the requirements");
         setSuccessFor(password2);
+    }
+    if (firstPassword == false) {
+        setErrorFor(password, "password dosent meet the requirements");
+    }
+    if (secondPassword == false) {
+        setErrorFor(password2, "password dosent meet the requirements");
     }
 }
