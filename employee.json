@@ -1,6 +1,6 @@
 {"records":[
-{"id":1,"name":Gopal,"gender":M,"salary":10000},
-{"id":2,"name":Hiran,"gender":F,"salary":10000},
-{"id":3,"name":fogger,"gender":M,"salary":25000},
-{"id":4,"name":githang,"gender":F,"salary":13000}
+{"id":1,"name":"Gopal","gender":"M","salary":10000},
+{"id":2,"name":"Hiran","gender":"F","salary":10000},
+{"id":3,"name":"fogger","gender":"M","salary":25000},
+{"id":4,"name":"githang","gender":"F","salary":13000}
 ]}
