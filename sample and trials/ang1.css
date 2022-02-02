@@ -1,0 +1,20 @@
+body {
+    background-color: cadetblue;
+    width: max-content;
+    float: center;
+}
+
+div {
+    width: min-content;
+    float: center;
+}
+
+table {
+    padding-left: 300px;
+}
+
+th,
+tr,
+td {
+    background-color: darkseagreen;
+}

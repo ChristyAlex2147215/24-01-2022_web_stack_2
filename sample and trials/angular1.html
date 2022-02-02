@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="js_3.js"></script>
+    <link rel="stylesheet" href="ang1.css"></link>
+</head>
+
+<body ng-controller="myctrl">
+    <div>
+        <table cellpadding="2" cellspacing="2" align="center" border="1">
+            <tr>
+                <th>id<br>
+                    <input type="text" ng-model="search.id"></th>
+
+                <th>name<br>
+                    <input type="text" ng-model="search.name"></th>
+
+                <th>gender <br><input type="text" ng-model="search.gender">
+                    <th>Salary
+                        <br>
+                        <input type=" text " ng-model="search.salary "></th>
+                </th>
+
+            </tr>
+            <tr ng-repeat="item in names|filter:search ">
+                <td>{{item.id}}</td>
+                <td>{{item.name|upperFirst}}</td>
+                <td>{{item.gender|uppercase|limitTo:1 }}</td>
+                <td>{{item.salary|currency|salClass }}</td>
+            </tr>
+        </table>
+        <ul>
+            <li ng-repeat="x in names">
+                {{x.name | myFormat1}}
+            </li>
+        </ul>
+    </div>
+
+</body>
+<script>
+    //https://prabukiwi1.github.io/Mscds1/employee.json
+    var myapp = angular.module("myapp ", []);
+    myapp.filter('upperFirst', function() {
+        return function(x) {
+            a = x.split(" ");
+            var ab = " ";
+            for (i = 0; i < a.length; i++) {
+                ab = ab + "" + (a[i].charAt(0).toUpperCase() + a[i].slice(1));
+            }
+            ab = ab.trim();
+            return ab;
+        }
+    });
+    myapp.filter('salClass', function() {
+        return function(x) {
+            if (x >= 50000 & x <= 100000) {
+                return "class-4"
+            } else if (x < 50000 & x >= 30000) {
+                return "class-3"
+            } else if (x < 30000 & x >= 15000) {
+                return "class-2"
+            } else {
+                return "class-1"
+            }
+        }
+    });
+    myapp.controller("myctrl ", function($scope, $http) {
+        $http.get('https://prabukiwi1.github.io/Mscds1/employee.json')
+            .success(function(response) {
+                $scope.names = response.records;
+                var namez = response.records;
+            });
+    });
+</script>
+
+</html>

@@ -85,34 +85,116 @@ function passwordvalidation(password, password2) {
     var passwordvalue = password.value.trim();
     var password2value = password2.value.trim();
     console.log("first password:" + password + "\nsecond passwprd:" + password2);
-    if (password2value === "" {
+    if (password2value === "") {
 
-            setErrorFor(password2, "password cant be empty");
-        }
-        if (passwordvalue === "") {
-            setErrorFor(password, "password cant be empty");
-        }
-        if (passwordvalue !== password2value) {
-            setErrorFor(password2, "passwords does't match");
-            setSuccessFor(password, "passwords does't match");
-        } else {
-            setSuccessFor(password2);
-            setSuccessFor(password);
-        }
+        setErrorFor(password2, "password cant be empty");
+    }
+    if (passwordvalue === "") {
+        setErrorFor(password, "password cant be empty");
+    }
+    if (passwordvalue !== password2value) {
+        setErrorFor(password2, "passwords does't match");
+        setSuccessFor(password, "passwords does't match");
+    } else {
+        setSuccessFor(password2);
+        setSuccessFor(password);
+    }
 
-        var firstPassword = /^(?=.{10,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?\W).*$/g.test(password);
-        var secondPassword = /^(?=.{10,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?\W).*$/g.test(password2);
-        if (firstPassword & secondPassword) {
-            setSuccessFor(password);
-            setSuccessFor(password2);
-        } else if (firstPassword & secondPassword == false) {
-            setSuccessFor(password);
-            setErrorFor(password2, "password dosent meet the requirements");
-        } else if (firstPassword == false & secondPassword) {
-            setErrorFor(password, "password dosent meet the requirements");
-            setSuccessFor(password2);
-        } else {
-
-        }
+    var firstPassword = /^(?=.{10,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?\W).*$/g.test(password);
+    var secondPassword = /^(?=.{10,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?\W).*$/g.test(password2);
+    if (firstPassword & secondPassword) {
+        setSuccessFor(password);
+        setSuccessFor(password2);
+    } else if (firstPassword & secondPassword == false) {
+        setSuccessFor(password);
+        setErrorFor(password2, "password dosent meet the requirements");
+    } else if (firstPassword == false & secondPassword) {
+        setErrorFor(password, "password dosent meet the requirements");
+        setSuccessFor(password2);
+    } else {
 
     }
+
+}
+
+function addcookies() {
+    var name = document.getElementById("username");
+    var phone = document.getElementById("phone");
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
+    var password2 = document.getElementById("password2");
+    const dates = prompt("Enter cookie expiration in days");
+    alert(`set expiration: ${dates}`);
+    setCookie("cookie_name", name, parseInt(dates));
+    setCookie("cookie_phone", phone, parseInt(dates));
+    setCookie("cookie_email", email, parseInt(dates));
+    setCookie("cookie_password", password, parseInt(dates));
+    console.log("addcokiee function called");
+}
+
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    console.log("cookies are set");
+}
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    console.log("called getcookie");
+    return "";
+}
+
+function seeAllCookies() {
+    alert(getCookie("cookie_name") + " " + getCookie("cookie_phone") + " " + getCookie("cookie_email") + " " + getCookie("cookie_password"));
+    console.log(getCookie("cookie_name"));
+}
+
+function removecookies() {
+    document.cookie = cookie_name + ";max-age=0";
+    cookie_name = document.cookie;
+    document.cookie = cookie_phone + ";max-age=0";
+    cookie_phone = document.cookie;
+    document.cookie = cookie_email + ";max-age=0";
+    cookie_email = document.cookie;
+    document.cookie = cookie_password + ";max-age=0";
+    cookie_password = document.cookie;
+    alert("all cookies are cleared deleted");
+}
+
+
+
+
+function setLocalStorage() {
+    var name = document.getElementById("username");
+    var phone = document.getElementById("phone");
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
+    localStorage.setItem("username", name);
+    localStorage.setItem("userphone", phone);
+    localStorage.setItem("useremail", email);
+    localStorage.setItem("userpwd", password);
+    console.log("Local storages set successfull");
+}
+
+function sessionStorage() {
+    var name = document.getElementById("username");
+    var phone = document.getElementById("phone");
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
+    sessionStorage.setItem("user_name", name);
+    sessionStorage.setItem("user_phone", phone);
+    sessionStorage.setItem("user_email", email);
+    sessionStorage.setItem("user_pwd", password);
+}
