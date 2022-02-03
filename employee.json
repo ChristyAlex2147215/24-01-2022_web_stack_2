@@ -1,6 +1,12 @@
-{"records":[
-{"id":1,"name":"Gopal","gender":"M","salary":10000},
-{"id":2,"name":"Hiran","gender":"F","salary":10000},
-{"id":3,"name":"fogger","gender":"M","salary":25000},
-{"id":4,"name":"githang","gender":"F","salary":13000}
-]}
+{"records":[ 
+{"id":1,"name":"mrithula kurian","gender":"Female","salary":50000},
+{"id":2,"name":"Indira paul","gender":"Female","salary":100000},
+{"id":3,"name":"Anu sebastian","gender":"Female","salary":550000},
+{"id":4,"name":"Meenu vargise","gender":"Male","salary":100000},
+{"id":5,"name":"Sadhur gowda","gender":"Male","salary":50000},
+{"id":6,"name":"niranjini krishna","gender":"Female","salary":30000},
+{"id":6,"name":"ujjwal jain","gender":"Male","salary":150000},
+{"id":6,"name":"gomathi kesar","gender":"Female","salary":15000},
+{"id":6,"name":"gopal","gender":"Male","salary":53000},
+{"id":6,"name":"nikki minaj","gender":"Female","salary":23000},
+{"id":6,"name":"gokul pavithran","gender":"Male","salary":250000}]}
