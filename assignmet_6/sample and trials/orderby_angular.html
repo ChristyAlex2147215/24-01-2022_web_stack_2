@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="ctrlname">
+        <p></p>
+        <ul>
+            <li ng-repeat="x in name|orderBy :'country'">{{x.name|upperFirst}}, {{x.country}}</li>
+        </ul>
+    </div>
+
+</body>
+<script>
+    var myapp = angular.module("myApp", []);
+    myapp.controller("ctrlname", function($scope) {
+        $scope.name = [{
+            name: "akhil vinod",
+            country: "Kerala"
+        }, {
+            name: "nikith varma",
+            country: "UP"
+        }, {
+            name: "Hiran agarwal",
+            country: "Bengal"
+        }];
+    });
+    myapp.filter('upperFirst', function() {
+        return function(x) {
+            a = x.split(" ");
+            var ab = " ";
+            for (i = 0; i < a.length; i++) {
+                ab = ab + " " + (a[i].charAt(0).toUpperCase() + a[i].slice(1));
+            }
+            ab = ab.trim();
+            return ab;
+        }
+    });
+</script>
+
+</html>
