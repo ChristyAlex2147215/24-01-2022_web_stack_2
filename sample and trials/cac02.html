@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js">
+    </script>
+    <script>
+        //dom parser
+        window.onload = loadXMLDoc();
+
+        function loadXMLDoc() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // alert("let's go! table loaded");
+                    myFunction(this);
+                }
+            };
+            xmlhttp.open("GET", "Xml_06-01-2022.xml", true);
+            xmlhttp.send();
+        }
+
+        function myFunction(xml) {
+            var i;
+            var xmlDoc = xml.responseXML;
+            var table = "<tr><th>Name</th><th>Register_id</th><th>Specilization</th><th>Phone</th></tr>";
+            var x = xmlDoc.getElementsByTagName("Consultants");
+            for (i = 0; i < x.length; i++) {
+                table += "<tr><td>" +
+                    x[i].getElementsByTagName("Name")[0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    x[i].getElementsByTagName("Register_id")[0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    x[i].getElementsByTagName("Specilization")[0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    x[i].getElementsByTagName("Phone")[0].childNodes[0].nodeValue +
+                    "</td></tr>";
+            }
+            document.getElementById("demo").innerHTML = table;
+        }
+    </script>>
+    <script>
+        function savefavcol() {
+            var param = document.getElementById("color_select").value;
+            if (param != "") {
+                Cookies.set('fav_color', param, {
+                    expires: 2
+                });
+                console.log("cookie created");
+            }
+
+            console.log("hello world");
+            document.body.style.backgroundColor = Cookies.get("fav_color");
+            console.log(param);
+            console.log(Cookies.get("fav_color"));
+        }
+    </script>
+</head>
+
+<body onload="savefavcol()">
+    <p>HEllo worlds</p>
+    <input id="color_select" type="text" />
+    <input type="submit" onclick="savefavcol()">change fav color</input>
+</body>
+
+</html>

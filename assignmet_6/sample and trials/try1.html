@@ -11,7 +11,9 @@
 </head>
 
 <body ng-controller="myctrl">
-    ROws to display<input type="number" step="1" min="0" max="10" ng-model="rowLim" />
+    <h3 align="center">Our Top paied Lawyers</h3>
+    <div align="center"><span>Rows to display</span><input type="number" step="1" min="0" max="10" ng-model="rowLim" /></div>
+
     <table cellpadding="2" cellspacing="2" border="1">
         <tr>
             <th ng-click="orderByMe('id')">id<br>
@@ -45,7 +47,7 @@
                     $scope.orderByMe = function(x) {
                         $scope.myOrderBy = x;
                     }
-                    $scope.rowLim = 6;
+                    $scope.rowLim = 8;
                 }
 
             );

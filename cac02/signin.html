@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Prima facie -Affordable law to all</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <!--Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="signin_style.css">
+    <script type="text/javascript" src="signin_js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+
+</head>
+
+<body>
+    <!--
+    <div class="form" align="center">
+        <div id="forms">
+            <form>
+                <label>Enter User Name</label>
+                <input id="uname" type="text" placeholder="User Name">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small><br>
+                
+                <label>Enter phone</label>
+                <input id="uphone" type="number" placeholder="Phone number">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small><br>
+
+                <label>Enter Password</label>
+                <input id="upass" type="password" placeholder="password">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i><br>
+                <label>Confirm Password</label>
+                <input id="upass2" type="password" placeholder="password">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small><br>
+                <label>Enter Email</label>
+                <input id="uemail" type="email" placeholder="email">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small><br>
+            </form>
+        </div>
+        <div id="buttons">
+            <form action="">
+                <input type="submit">
+                <input type="reset">
+            </form>
+        </div>
+    </div>-->
+    <div class="container">
+        <div>
+            <h2>create account</h2>
+        </div>
+        <form class="form" id="form">
+            <div class="form-control">
+                <label>Name</label>
+                <input id="username" type="text" placeholder="username" onsubmit="return namecapitalize(event)" onkeypress="return restrictnumbers(event)">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label>college/university name,</label>
+                <input id="collage_name" type="text" placeholder="collage_name">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label>Email</label>
+                <input id="email" type="email" placeholder="email">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label>Branch</label>
+                <input id="branch" type="text" placeholder="Branch">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label>State</label>
+                <input id="state" type="text" placeholder="state">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label>Address</label>
+                <input id="address" type="text" placeholder="Address">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label>Age</label>
+                <input id="age" type="number" placeholder="age">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label>phone</label>
+                <input id="phone" type="number" placeholder="Phone">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label>password</label>
+                <input id="password" type="password" placeholder="password">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label>password check</label>
+                <input id="password2" type="password" placeholder="hello">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control buttons">
+                <input id="submit" type="button" value="submit" onclick="validate()"></input>
+                <input type="reset" id="reset" />
+            </div>
+
+
+        </form>
+    </div>
+
+    <script>
+        var phone = document.getElementById("phone").value.trim()
+        var email = document.getElementById("email").value.trim()
+        localStorage.setItem("phone", phone);
+        localStorage.setItem("email", email);
+    </script>
+</body>
+
+</html>
