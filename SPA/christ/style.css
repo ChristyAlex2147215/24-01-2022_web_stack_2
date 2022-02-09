@@ -1,0 +1,25 @@
+.header{
+    width: 880px;
+    height:80px;
+    text-align:center;
+    background-color: blue;
+}
+.footer{
+    background-color:blue;
+    text-align: center;
+}
+.leftMenu{
+    height:500px;
+    background-color: grey;
+    width:150px;
+}
+.leftMenu a{
+    width: 100%;
+    position:static;
+    color: red;
+}
+.mainContent{
+    height:500px;
+    background-color: #e6e6e6;
+    width: 650px;
+}

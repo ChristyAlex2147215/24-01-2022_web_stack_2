@@ -1,0 +1,35 @@
+.header{
+    width: 880px;
+    height:80px;
+    text-align:center;
+    background-color: blue;
+}
+.footer{
+    background-color:blue;
+    text-align: center;
+}
+.leftMenu{
+    height:500px;
+    background-color: grey;
+    width:100px;
+}
+.mainContent{
+    height:500px;
+    background-color: #e6e6e6;
+    width: 650px;
+}
+.leftMenu :nth-child(2){
+    width: 100%;
+    position:relative;
+    vertical-align:top;
+    padding-left: 2px;
+    left: 2px;
+    align-self: left;
+    align-content: lef;
+}
+.leftMenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
