@@ -1,19 +1,20 @@
 {
     "lawyers":
     [
-        { "firstName":"John", "lastName":"Doe", "email": "JohnDoe@forenza.com","dob":"21-10-1984","joindate":"11-07-2020","phone":"9986321456", "type":"Mall"},
-        { "firstName":"Anna", "lastName":"Smith" ,"email":"AnnaSmith@forenza.com","dob":"05-10-1979","joindate":"11-07-2020","phone":"8986321456","type":"Parking"},
-        { "firstName":"Marty", "lastName":"Doe", "email": "MartyDoe@forenza.com","dob":"21-10-1987","joindate":"11-07-2021","phone":"9986371456", "type":"Mall"},
-        { "firstName":"Sean", "lastName":"Murray" ,"email":"SeanMurray@forenza.com","dob":"05-10-1979","joindate":"11-07-2021","phone":"9984321456","type":"Parking"},
-        { "firstName":"Agna", "lastName":"Sean", "email": "AgnaSean@forenza.com","dob":"21-10-1984","joindate":"11-07-2021","phone":"9986331456", "type":"Mall"},
-        { "firstName":"Lolly", "lastName":"Smith" ,"email":"LollySmith@forenza.com","dob":"05-10-1979","joindate":"11-07-2020","phone":"8986321456","type":"Parking"},
-        { "firstName":"Peter", "lastName":"Jones","email":"PeterJones@forenza.com","dob":"21-11-2000","joindate":"11-07-2020","phone":"7986321456","type":"Mall" }
+        { "name":"John mathew","email": "JohnDoe@forenza.com","salary":10000,"experiance":3,"phone":"9986321456", "type":"criminal"},
+         { "name":"John mathew","email": "joth21@gmail.com","salary":14000,"experiance":9,"phone":"9986321456", "type":"civil"},
+         { "name":"John mathew","email": "mathew.john@gmail.com","salary":11000,"experiance":2,"phone":"9986321456", "type":"corporate"},
+         { "name":"John mathew","email": "JohnD@gmail.com","salary":15000,"experiance":11,"phone":"9986321456", "type":"criminal"},
+         { "name":"John mathew","email": "JohnDoe@forenza.com","salary":25000,"experiance":13,"phone":"9986321456", "type":"criminal"},
+         { "name":"John mathew","email": "mahew.john@forenza.com","salary":65000,"experiance":15,"phone":"9986321456", "type":"criminal"}
     ],
 
     "clients":
     [
-        { "firstName":"James", "lastName":"Johnny", "email": "James@headsecforenza.com","dob":"21-10-1984","joindate":"11-07-2020","phone":"9986321456", "role":"Ongoing"},
-        { "firstName":"Charles", "lastName":"Manny" ,"email":"AnnaSmith@headsecforenza.com","dob":"05-10-1979","joindate":"11-07-2020","phone":"8986321456","role":"Ongoing"},
-        { "firstName":"Maggie", "lastName":"Donny", "email": "MartyDoe@headsecforenza.com","dob":"21-10-1987","joindate":"11-07-2021","phone":"9986371456", "role":"Retired"}
+        { "name":"mathew hower","email": "James@headsecforenza.com","phone":"9986321456","type":"criminal"},
+        { "name":"daniel hunner","email": "James@headsecforenza.com","phone":"9986321456","type":"pocso"},
+        { "name":"foew gither","email": "James@headsecforenza.com","phone":"9986321456","type":"criminal"},
+        { "name":"Home comming","email": "James@headsecforenza.com","phone":"9986321456","type":"criminal"},
+       
     ]
 }
