@@ -1,7 +1,19 @@
-{"records":[ 
-{"id":1,"name":"Rithul","gender":"Male"},
-{"id":2,"name":"Indu","gender":"Female"},
-{"id":3,"name":"Anu","gender":"Female"},
-{"id":4,"name":"Manu","gender":"Male"},
-{"id":5,"name":"Sadhur","gender":"Male"},
-{"id":6,"name":"Veena","gender":"Female"}]}
+{
+    "lawyers":
+    [
+        { "firstName":"John", "lastName":"Doe", "email": "JohnDoe@forenza.com","dob":"21-10-1984","joindate":"11-07-2020","phone":"9986321456", "type":"Mall"},
+        { "firstName":"Anna", "lastName":"Smith" ,"email":"AnnaSmith@forenza.com","dob":"05-10-1979","joindate":"11-07-2020","phone":"8986321456","type":"Parking"},
+        { "firstName":"Marty", "lastName":"Doe", "email": "MartyDoe@forenza.com","dob":"21-10-1987","joindate":"11-07-2021","phone":"9986371456", "type":"Mall"},
+        { "firstName":"Sean", "lastName":"Murray" ,"email":"SeanMurray@forenza.com","dob":"05-10-1979","joindate":"11-07-2021","phone":"9984321456","type":"Parking"},
+        { "firstName":"Agna", "lastName":"Sean", "email": "AgnaSean@forenza.com","dob":"21-10-1984","joindate":"11-07-2021","phone":"9986331456", "type":"Mall"},
+        { "firstName":"Lolly", "lastName":"Smith" ,"email":"LollySmith@forenza.com","dob":"05-10-1979","joindate":"11-07-2020","phone":"8986321456","type":"Parking"},
+        { "firstName":"Peter", "lastName":"Jones","email":"PeterJones@forenza.com","dob":"21-11-2000","joindate":"11-07-2020","phone":"7986321456","type":"Mall" }
+    ],
+
+    "clients":
+    [
+        { "firstName":"James", "lastName":"Johnny", "email": "James@headsecforenza.com","dob":"21-10-1984","joindate":"11-07-2020","phone":"9986321456", "role":"Ongoing"},
+        { "firstName":"Charles", "lastName":"Manny" ,"email":"AnnaSmith@headsecforenza.com","dob":"05-10-1979","joindate":"11-07-2020","phone":"8986321456","role":"Ongoing"},
+        { "firstName":"Maggie", "lastName":"Donny", "email": "MartyDoe@headsecforenza.com","dob":"21-10-1987","joindate":"11-07-2021","phone":"9986371456", "role":"Retired"}
+    ]
+}
