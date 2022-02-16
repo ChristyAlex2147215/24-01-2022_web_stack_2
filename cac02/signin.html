@@ -16,6 +16,8 @@
     <!--Bootstrap-->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <!--Stylesheets-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,53 +29,14 @@
 </head>
 
 <body>
-    <!--
-    <div class="form" align="center">
-        <div id="forms">
-            <form>
-                <label>Enter User Name</label>
-                <input id="uname" type="text" placeholder="User Name">
-                <i class="fa fa-check-circle"></i>
-                <i class="fa fa-exclamation-circle"></i>
-                <small>Error message</small><br>
-                
-                <label>Enter phone</label>
-                <input id="uphone" type="number" placeholder="Phone number">
-                <i class="fa fa-check-circle"></i>
-                <i class="fa fa-exclamation-circle"></i>
-                <small>Error message</small><br>
-
-                <label>Enter Password</label>
-                <input id="upass" type="password" placeholder="password">
-                <i class="fa fa-check-circle"></i>
-                <i class="fa fa-exclamation-circle"></i><br>
-                <label>Confirm Password</label>
-                <input id="upass2" type="password" placeholder="password">
-                <i class="fa fa-check-circle"></i>
-                <i class="fa fa-exclamation-circle"></i>
-                <small>Error message</small><br>
-                <label>Enter Email</label>
-                <input id="uemail" type="email" placeholder="email">
-                <i class="fa fa-check-circle"></i>
-                <i class="fa fa-exclamation-circle"></i>
-                <small>Error message</small><br>
-            </form>
-        </div>
-        <div id="buttons">
-            <form action="">
-                <input type="submit">
-                <input type="reset">
-            </form>
-        </div>
-    </div>-->
     <div class="container">
         <div>
-            <h2>create account</h2>
+            <h2>Registration form</h2>
         </div>
-        <form class="form" id="form">
+        <form class="form" id="form" action="/home.html">
             <div class="form-control">
                 <label>Name</label>
-                <input id="username" type="text" placeholder="username" onsubmit="return namecapitalize(event)" onkeypress="return restrictnumbers(event)">
+                <input id="username" type="text" placeholder="username" onkeyup="upper_caser(),noNumbers()">
                 <i class="fa fa-check-circle"></i>
                 <i class="fa fa-exclamation-circle"></i>
                 <small>Error message</small>
@@ -81,7 +44,7 @@
             <div class="form-control">
                 <label>college/university name,</label>
                 <input id="collage_name" type="text" placeholder="collage_name">
-                <i class="fa fa-check-circle"></i>
+                <i class=" fa fa-check-circle"></i>
                 <i class="fa fa-exclamation-circle"></i>
                 <small>Error message</small>
             </div>
@@ -133,6 +96,13 @@
                 <i class="fa fa-check-circle"></i>
                 <i class="fa fa-exclamation-circle"></i>
                 <small>Error message</small>
+                <br><br><br><br>
+                <ul style="">
+                    <li id="label1"> a minimum of 1 lower case letter [a-z]</li>
+                    <li id="label2"> a minimum of 1 upper case letter [A-Z] </li>
+                    <li id="label3"> a minimum of 1 numeric character [0-9] </li>
+                    <li id="label4"> 1 special character: ~`!@#$%^&*()-_+={}[]|\;:">;,./?</li>
+                </ul>
             </div>
             <div class="form-control">
                 <label>password check</label>
@@ -145,16 +115,47 @@
                 <input id="submit" type="button" value="submit" onclick="validate()"></input>
                 <input type="reset" id="reset" />
             </div>
-
-
         </form>
     </div>
-
     <script>
-        var phone = document.getElementById("phone").value.trim()
-        var email = document.getElementById("email").value.trim()
-        localStorage.setItem("phone", phone);
-        localStorage.setItem("email", email);
+        $(function() {
+            var password = [
+                "qw4d%Fjd8h",
+                "asd2sHs#*dc",
+                "qw@ER2ty",
+                "qw23Bh.nd",
+                "qw3Gh(tM ",
+                "asn%89Gji,m",
+                "ketJH&2nm",
+                "asop@72%t",
+                "zxdh7fgh&df",
+                "poH5*6n",
+                "lk30gHt&mH",
+                "mnBg5#Hm",
+                "chH6@hsj"
+
+
+                /* Making a list of available tags */
+
+
+            ];
+            $("#password").autocomplete({
+                source: password
+
+                /* #the ags is the id of the input element
+                source: tags is the list of available tags*/
+
+
+            });
+            $("#password2").autocomplete({
+                source: password
+
+                /* #the ags is the id of the input element
+                source: tags is the list of available tags*/
+
+
+            });
+        });
     </script>
 </body>
 

@@ -1,0 +1,183 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+</head>
+
+<style>
+    .menu a {
+        float: left;
+        color: rgb(17, 182, 233);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    .menu {  
+            position: relative;
+            top: 0;
+            background-color:black;
+            padding:10px 0px 10px 0px;
+            color:white;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+     .menu   a:hover {
+     background-color:rgb(255, 255, 255);
+    }
+    body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: rgb(182, 121, 121);
+    }
+    table {
+      width: 50%;
+      margin-left: 15px;
+    }
+    th, td {
+      text-align: left;
+      padding-left: 8px;
+    }
+    th {
+      background-color:gray;
+      color: white;
+      text-align: center;
+    }
+
+    tr:nth-child(even) {background-color: #f2f2f2;
+    color: brown;  
+    }
+    
+    h2{
+      margin-left: 15px;
+    }
+    p{
+      margin-left: 15px;
+    }
+    input{
+      margin-left: 10px;
+    }
+
+    h1,h3{
+        text-align: center;
+        color: black;
+    }
+    #page1.html{
+    color: black;
+    text-align: center;
+
+
+    }
+    form{
+      float:center;
+      width: 100%;
+    }
+    #login
+    {
+      width: 100%;
+      padding-right: 0px;
+      padding-left: 60%;
+     transform:translate(-30px,-110px) ;
+
+    }
+    input[type="text"],input[type="password"]
+    {
+    width: 200px;
+    height: 30px;
+    }
+    #page2.html
+    {
+      
+    }
+  </style>
+ 
+ 
+
+<body>
+
+<div class="menu">
+        <a href="#/">Home</a>
+        <a href="#/database">Lawyers</a>
+        <a href="#/databasewithsearch">Clients</a>
+</div>
+<br>
+<br>
+
+<div id="maintext">
+<script type="text/ng-template" id="page1.html" >
+<h1>Home Page</h1>
+<h3 ng-show="person">{{person.first}}{{ }}{{person.last}}</h3>
+<h3>{{message}}</h3>
+</script>
+<div align:"right" id="login">
+  <input type="text" name="userid " id="userid " placeholder="userid" />
+  <input type="password" id="psswd" placeholder="password" />
+  <input type="submit" value="Login" onclick="validate() " /> 
+</div>
+
+</div>
+
+
+
+<script type="text/ng-template" id="page2.html">
+<h1>Lawyer table</h1>
+  <div ng-controller="SecondController" id="lawyertable">
+    <form name="commonForm">
+      <table class="table" >
+        <tr>
+          <th> Name </th>
+          <th> Email </th>
+          <th>salary</th>
+          <th> experiance </th>
+          <th> Phone </th>
+          <th> Type </th>
+        </tr>
+        <tr ng-repeat="employee in userData | filter : test">
+          <td> {{employee.name}}</td>
+          <td> {{employee.email | lowercase}}</td>
+          <td> {{employee.salary}}</td>
+          <td> {{employee.experiance}}</td>
+          <td> {{employee.phone}}</td>
+          <td> {{employee.type}}</td>
+          
+        </tr>
+      </table>
+      <br>
+    </form>
+  </div>
+</script>
+
+
+<script type="text/ng-template" id="page3.html">
+<h1>Search From Database</h1>
+<div>
+    <h2>Clients database</h2>
+  </div>
+  <div ng-controller="ThirdController">
+    <p>Search:<input type="text" ng-model="test"></p>
+    <form name="commonForm">
+      <table class="table">
+        <tr>
+          <th> Name </th>
+          <th> Email </th>
+          <th> Phone </th>
+          <th> case Type </th>
+        </tr>
+        <tr ng-repeat="employee in userData | filter : test">
+          <td> {{employee.name}}</td>
+          <td> {{employee.email | lowercase}}</td>
+          <td> {{employee.phone}}</td>
+          <td> {{employee.type}}</td>
+        </tr>
+      </table>
+      <br>
+    </form>
+  </div>
+</script>
+
+
+<div ng-view></div>
+
+<script src="app.js"></script>
+</body>
+</html>

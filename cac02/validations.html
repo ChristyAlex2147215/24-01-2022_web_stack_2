@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Autocomplete using Jquery</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.
+css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>Document</title>
+</head>
+<!--upper casing first word-->
+<script>
+    function upper_caser() {
+        var a = document.getElementById("name1").value.trim();
+        console.log(a.toUpperCase());
+        //document.getElementById("name1").value = a.toUpperCase();
+        //return a.toUpperCase();
+        // if (a[0] === a[0].toUpperCase()) {
+        // document.getElementById("name1").value = a[0].toUpperCase() + a.slice(1)
+        //} else {
+        document.getElementById("name1").value = a[0].toUpperCase() + a.slice(1).toLowerCase();
+        if (a == "") {
+            document.getElementById("password").disabled = true;
+        }
+        //}
+    }
+</script>
+<param> Enter the name </param><input id="name1" type="text" placeholder="enter name" onkeyup="upper_caser()" />
+</form>
+<!--password suggetions-->
+<script>
+    $(function() {
+        var password = [
+            "qw4d%Fjd8h",
+            "asd2sHs#*dc",
+            "qw@ER2ty",
+            "Uttar Pradesh",
+            "Himachal Pradesh",
+            "Karnatka",
+            "Kerela",
+            "Maharashtra",
+            "Gujrat",
+            "Rajasthan",
+            "Bihar",
+            "Tamil Nadu",
+            "Haryana"
+
+
+            /* Making a list of available tags */
+
+
+        ];
+        $("#password").autocomplete({
+            source: password
+
+            /* #the ags is the id of the input element
+            source: tags is the list of available tags*/
+
+
+        });
+    });
+</script>
+
+<div class="ui-widget">
+    <H3>Enter an alphabet to get suggestion:</H3>
+    <input id="password" type="text" onkeyup="noNumbers()">
+</div>
+<script>
+    function noNumbers() {
+        var a = document.getElementById("password").value.trim();
+        var lat = a.slice(a.length - 1);
+        console.log(lat);
+        if (parseInt(lat) === 0) {
+            console.log("got it");
+        }
+        if (parseInt(lat) > 0 | parseInt(lat) <= 9) {
+            document.getElementById("password").value = a.replace(lat, "");
+            return false;
+        }
+
+    }
+</script>
+
+</body>
+
+</html>
