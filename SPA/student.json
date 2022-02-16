@@ -1,7 +1,20 @@
-{"records":[ 
-{"id":1,"name":"Rithul","gender":"Male"},
-{"id":2,"name":"Indu","gender":"Female"},
-{"id":3,"name":"Anu","gender":"Female"},
-{"id":4,"name":"Manu","gender":"Male"},
-{"id":5,"name":"Sadhur","gender":"Male"},
-{"id":6,"name":"Veena","gender":"Female"}]}
+{
+    "lawyers":
+    [
+        { "name":"John mathew","email": "JohnDoe@forenza.com","salary":10000,"experiance":3,"phone":"9986321456", "type":"criminal"},
+         { "name":"John mathew","email": "joth21@gmail.com","salary":14000,"experiance":9,"phone":"9986321456", "type":"civil"},
+         { "name":"John mathew","email": "mathew.john@gmail.com","salary":11000,"experiance":2,"phone":"9986321456", "type":"corporate"},
+         { "name":"John mathew","email": "JohnD@gmail.com","salary":15000,"experiance":11,"phone":"9986321456", "type":"criminal"},
+         { "name":"John mathew","email": "JohnDoe@forenza.com","salary":25000,"experiance":13,"phone":"9986321456", "type":"criminal"},
+         { "name":"John mathew","email": "mahew.john@forenza.com","salary":65000,"experiance":15,"phone":"9986321456", "type":"criminal"}
+    ],
+
+    "clients":
+    [
+        { "name":"mathew hower","email": "James@headsecforenza.com","phone":"9986321456","type":"criminal"},
+        { "name":"daniel hunner","email": "James@headsecforenza.com","phone":"9986321456","type":"pocso"},
+        { "name":"foew gither","email": "James@headsecforenza.com","phone":"9986321456","type":"criminal"},
+        { "name":"Home comming","email": "James@headsecforenza.com","phone":"9986321456","type":"criminal"}
+       
+    ]
+}
