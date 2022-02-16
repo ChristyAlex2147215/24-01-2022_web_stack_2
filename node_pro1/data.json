@@ -1,11 +1,1 @@
-{
-    "student":[
-    {"name":"gim","age":16,"course":"mca","rollnumber":1541},
-    {"name":"tim","age":15,"course":"physics","rollnumber":1245},
-    {"name":"kim","age":17,"course":"psycology","rollnumber":1545},
-    {"name":"nim","age":14,"course":"ma","rollnumber":1547},
-    {"name":"vim","age":15,"course":"mba","rollnumber":1549},
-    {"name":"sim","age":15,"course":"msw","rollnumber":1552}
-    ]
-
-}
+[{"name":"gim","age":16,"course":"mca","rollnumber":1541},{"name":"tim","age":15,"course":"physics","rollnumber":1245},{"name":"kim","age":17,"course":"psycology","rollnumber":1545},{"name":"nim","age":14,"course":"ma","rollnumber":1547},{"name":"vim","age":15,"course":"mba","rollnumber":1549},{"name":"sim","age":15,"course":"msw","rollnumber":1552},{"name":"Navin","age":15,"course":"msw","rollnumber":1552},{"name":"Navin","age":15,"course":"msw","rollnumber":1552},{"name":"Navin","age":15,"course":"msw","rollnumber":1552},{"name":"Navin","age":15,"course":"msw","rollnumber":1552},{"name":"Navin","age":15,"course":"msw","rollnumber":1552},{"name":"Navin","age":15,"course":"msw","rollnumber":1552}]
